@@ -1,0 +1,90 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+<style>
+
+h1 {
+
+    color: gray;
+}
+
+.Operations .dsad
+{
+    width: 40px;
+    margin-right: 100px;
+}
+
+.Operations > *
+{
+    margin-top: 10px;
+}
+
+.Hidden
+{
+    display: none;
+}
+</style>
+</head>
+
+<body>
+<h1>insert your name and password</h1>
+<form name="myform">
+Name<input type="text" name="user"><br>
+<br>
+passwoe <input type="password" name="pass"> 
+<br>
+<input type="button" value="signin" onclick="sign()" ondblclick="myFunction()">
+<p id="demo"></p>
+</form>
+
+
+<div id="mydiv">
+<form name="hidden" >
+    <div class="Hidden Operations">
+        <h1>Add Items To List</h1>
+        <div>
+          <label>Item Name</label>
+          <input type="text" class="ItemValue" />
+          <button class="AddItem">Add Item</button>
+        </div>
+    
+        <div>
+          <label>Number Of Items</label>
+          <input type="text" class="NumberOfItems" disabled />
+          <button class="ShowBtn">Show List</button>
+          <button class="ClearBtn">Clear List</button>
+        </div>
+    
+        <div>
+          <div>Items In List</div>
+          <div class="ToShowAns"></div>
+        </div>
+      </div>
+</form>
+</div>
+
+
+
+
+
+<script>
+    let Operations = document.querySelector(".Operations");
+    function sign (){
+        var x =document.forms["myform"]["user"].value
+        var y =document.forms["myform"]["pass"].value
+        if(x =="yazed" && y == "123" ){
+
+            Operations.classList.toggle("Hidden");
+            
+               
+            
+        }else{
+            alert("shit")
+        }
+    }
+    </script>
+</body>
+
+
+    </html>
+    
